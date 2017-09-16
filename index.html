@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>EvenStronger</title>
+    <link rel="shortcut icon" href="icon/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body class="home">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color:#7BA434;font-size:16pt;" href="#">
+                <b>EvenStronger</b></a>
+                <br/>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="feedback.html">Feedback</a></li>
+                <!-- <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="bodySpace">
+        <div class="setList" align="centers">
+            <ul class="list-group">
+                <div class="listheader">Web Technology<span style="float:right;font-size:8pt;">scroll for more</span></div>
+                <li class="list-group-item listData" onclick="setYoutubeLink('https://www.youtube.com/embed/tff-HA-Qzp8?rel=0')" data-toggle="modal"
+                    data-target="#myModal">Week 4 | Tutorials - Create calculator using bootstrap</li>
+                <li class="list-group-item listData" onclick="setYoutubeLink('https://www.youtube.com/embed/ohhmirrnU84?rel=0')" data-toggle="modal"
+                    data-target="#myModal">Week 3 | Tutorials - HTML color code generation</li>
+                <li class="list-group-item listData" onclick="setYoutubeLink('https://www.youtube.com/embed/zCx2fD0PXkI?rel=0')" data-toggle="modal"
+                    data-target="#myModal">Week 2 | Tutorials | part 3 - Css, JavaScript integration with HTML</li>
+                <li class="list-group-item listData" onclick="setYoutubeLink('https://www.youtube.com/embed/vq834H1w8YU?rel=0')" data-toggle="modal"
+                    data-target="#myModal">Week 2 | Tutorials | part 2 - Css, JavaScript integration with HTML</li>
+                <li class="list-group-item listData" onclick="setYoutubeLink('https://www.youtube.com/embed/ZR92FJVINTg?rel=0')" data-toggle="modal"
+                    data-target="#myModal">Week 2 | Tutorials | part 1 - Css, JavaScript integration with HTML</li>
+                <li class="list-group-item listData" onclick="setYoutubeLink('https://www.youtube.com/embed/h9l3mGnAnQ8?rel=0')" data-toggle="modal"
+                    data-target="#myModal">Week 1 | Tutorials | part 2 - How to start projects ?</li>
+                <li class="list-group-item listData" onclick="setYoutubeLink('https://www.youtube.com/embed/PkAQzasfw6o?rel=0')" data-toggle="modal"
+                    data-target="#myModal">Week 1 | Tutorials | part 1 - How to start projects ?</li>
+            </ul>
+        </div>
+        <div class="setList" align="centers">
+            <div class="listheader">Photoshop</div>
+            <li class="list-group-item listData">
+                <h1>Coming soon...</h1>
+            </li>
+        </div>
+        <div class="setList" align="centers">
+            <div class="listheader">Animation using photoshop</div>
+            <li class="list-group-item listData">
+                <h1>Coming soon...</h1>
+            </li>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" style="width:100%;" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Youtube Embed</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" id="ytLink" src="https://www.youtube.com/embed/PkAQzasfw6o?rel=0" frameborder="0" allowfullscreen></iframe>
+                    <div class="g-ytsubscribe" data-channelid="UCuft1InkD50d1cZJsP4QS-w" data-layout="default" data-count="default" data-onytevent="onYtEvent"></div>
+                    Subscribe! for more updates
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+    <script>
+        function onYtEvent(payload) {
+            if (payload.eventType == 'subscribe') {
+                // Add code to handle subscribe event.
+            } else if (payload.eventType == 'unsubscribe') {
+                // Add code to handle unsubscribe event.
+            }
+            if (window.console) { // for debugging only
+                window.console.log('YT event: ', payload);
+            }
+        }
+    </script>
+    <script>
+        function setYoutubeLink(link) {
+            var a = document.getElementById("ytLink");
+            a.src = link;
+        }
+    </script>
+</body>
+
+</html>

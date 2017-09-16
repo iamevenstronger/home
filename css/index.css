@@ -1,0 +1,26 @@
+.home {
+    background-color: #7BA434;
+}
+.listData{
+    font-size: 10pt ;
+}
+.navHeader{
+    color : #7BA434 ;
+}
+.bodySpace{
+    padding-left: 10px ;
+    padding-top: 10px ;
+}
+.setList{
+    padding: 10px ;
+    overflow-y: scroll ;
+    min-height: 70px ;
+    max-height: 300px;
+    width : 100% ;
+}
+.listheader{
+    background-color:blueviolet !important;
+    color:white !important;
+    padding:10px !important;
+    font-weight:bold !important;
+}
